@@ -1,0 +1,9 @@
+[
+    {
+        "model": "petsapi.action",
+        "pk": 1,
+        "fields": {
+            "name": "Feed"
+        }
+    }
+]

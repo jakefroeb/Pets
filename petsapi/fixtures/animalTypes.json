@@ -1,0 +1,10 @@
+[
+    {
+        "model": "petsapi.animal_type",
+        "pk": 1,
+        "fields": {
+            "name": "Dog",
+            "actions":[1]
+        }
+    }
+]
