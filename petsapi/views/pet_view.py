@@ -43,6 +43,8 @@ class PetView(ViewSet):
     def list(self, request):
         user = request.auth.user
         pets = Pet.objects.filter(user=user)
+        for pet in pets:
+            print(pet.happiness)
         serializer = PetSerializer(
             pets, many=True, context={'request': request})
         return Response(serializer.data)
@@ -84,4 +86,4 @@ class PetSerializer(serializers.ModelSerializer):
     animal_type = AnimalTypeSerializer(many=False)
     class Meta:
         model = Pet
-        fields = ('id', 'name','user','animal_type')
+        fields = ('id', 'name','user','animal_type','happiness', 'image_url')
